@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pio-env-graph"
+version = "0.1.0"
+description = "Visualize PlatformIO environment dependency graph"
+requires-python = ">=3.10"
+
+[project.scripts]
+pio-env-graph = "pio_env_graph.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.black]
+line-length = 120
+target-version = ["py310"]
