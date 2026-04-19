@@ -1,8 +1,18 @@
 # pio-env-graph
 
+> ⚠️ **Early development** — this project is in beta. The core functionality works but the API and CLI flags may change between releases. Feedback and bug reports are welcome.
+
 Visualize `extends` dependencies between sections in `platformio.ini` as a Graphviz DOT graph.
 
 ## Install
+
+From PyPI (once published):
+
+```bash
+pip install pio-env-graph
+```
+
+From source:
 
 ```bash
 pip install -e .
