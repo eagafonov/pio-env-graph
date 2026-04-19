@@ -42,7 +42,7 @@ Directions: `RL` (right-to-left, default), `LR`, `TB`, `BT`.
 
 ### Default (RL)
 
-![default](https://raw.githubusercontent.com/eagafonov/pio-env-graph/master/docs/example-default.png)
+![default](https://github.com/eagafonov/pio-env-graph/blob/master/docs/example-default.png?raw=true)
 
 ### Top to bottom
 
@@ -50,7 +50,7 @@ Directions: `RL` (right-to-left, default), `LR`, `TB`, `BT`.
 pio-env-graph -d TB
 ```
 
-![top-to-bottom](https://raw.githubusercontent.com/eagafonov/pio-env-graph/master/docs/example-top-to-bottom.png)
+![top-to-bottom](https://github.com/eagafonov/pio-env-graph/blob/master/docs/example-top-to-bottom.png?raw=true)
 
 ### With `${section.key}` references
 
@@ -58,11 +58,11 @@ pio-env-graph -d TB
 pio-env-graph --refs
 ```
 
-![refs](https://raw.githubusercontent.com/eagafonov/pio-env-graph/master/docs/example-refs.png)
+![refs](https://github.com/eagafonov/pio-env-graph/blob/master/docs/example-refs.png?raw=true)
 
 ### Real-world: Meshtastic firmware
 
-The [Meshtastic firmware](https://github.com/meshtastic/firmware) project has 254 sections and 255 edges — [view the full graph](https://raw.githubusercontent.com/eagafonov/pio-env-graph/master/docs/example-meshtastic.png) (large image, [DOT source](docs/example-meshtastic.dot)).
+The [Meshtastic firmware](https://github.com/meshtastic/firmware) project has 254 sections and 255 edges — [view the full graph](https://github.com/eagafonov/pio-env-graph/blob/master/docs/example-meshtastic.png) (large image, [DOT source](docs/example-meshtastic.dot)).
 
 ## Development
 
