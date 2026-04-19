@@ -1,7 +1,7 @@
 VENV = .venv
 BIN = $(VENV)/bin
 
-.PHONY: lint format test
+.PHONY: lint format test version
 
 $(VENV):
 	python3 -m venv $(VENV)
@@ -17,3 +17,6 @@ format: $(VENV)
 
 test: $(VENV)
 	$(BIN)/pytest
+
+version: $(VENV)
+	@$(BIN)/python -m setuptools_scm

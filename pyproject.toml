@@ -1,10 +1,10 @@
 [build-system]
-requires = ["setuptools>=68.0"]
+requires = ["setuptools>=68.0", "setuptools-scm>=8"]
 build-backend = "setuptools.build_meta"
 
 [project]
 name = "pio-env-graph"
-version = "0.1.0"
+dynamic = ["version"]
 description = "Visualize PlatformIO environment dependency graph"
 requires-python = ">=3.10"
 license = "MIT"
@@ -32,6 +32,10 @@ Issues = "https://github.com/eagafonov/pio-env-graph/issues"
 
 [project.scripts]
 pio-env-graph = "pio_env_graph.cli:main"
+
+[tool.setuptools_scm]
+version_scheme = "guess-next-dev"
+local_scheme = "no-local-version"
 
 [tool.setuptools.packages.find]
 where = ["src"]
