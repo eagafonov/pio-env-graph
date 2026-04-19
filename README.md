@@ -12,6 +12,12 @@ From PyPI (once published):
 pip install pio-env-graph
 ```
 
+From GitHub:
+
+```bash
+pip install git+https://github.com/eagafonov/pio-env-graph.git
+```
+
 From source:
 
 ```bash
