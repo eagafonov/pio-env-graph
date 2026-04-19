@@ -42,7 +42,7 @@ Directions: `RL` (right-to-left, default), `LR`, `TB`, `BT`.
 
 ### Default (RL)
 
-![default](docs/example-default.png)
+![default](https://raw.githubusercontent.com/eagafonov/pio-env-graph/master/docs/example-default.png)
 
 ### Top to bottom
 
@@ -50,7 +50,7 @@ Directions: `RL` (right-to-left, default), `LR`, `TB`, `BT`.
 pio-env-graph -d TB
 ```
 
-![top-to-bottom](docs/example-top-to-bottom.png)
+![top-to-bottom](https://raw.githubusercontent.com/eagafonov/pio-env-graph/master/docs/example-top-to-bottom.png)
 
 ### With `${section.key}` references
 
@@ -58,7 +58,7 @@ pio-env-graph -d TB
 pio-env-graph --refs
 ```
 
-![refs](docs/example-refs.png)
+![refs](https://raw.githubusercontent.com/eagafonov/pio-env-graph/master/docs/example-refs.png)
 
 ## Development
 
