@@ -7,6 +7,28 @@ name = "pio-env-graph"
 version = "0.1.0"
 description = "Visualize PlatformIO environment dependency graph"
 requires-python = ">=3.10"
+license = "MIT"
+readme = "README.md"
+keywords = ["platformio", "graphviz", "dependency-graph", "embedded", "cli"]
+authors = [
+    { name = "Eugene Agafonov", email = "e.a.agafonov@gmail.com" },
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Software Development :: Build Tools",
+]
+
+[project.urls]
+Homepage = "https://github.com/eagafonov/pio-env-graph"
+Repository = "https://github.com/eagafonov/pio-env-graph"
+Issues = "https://github.com/eagafonov/pio-env-graph/issues"
 
 [project.scripts]
 pio-env-graph = "pio_env_graph.cli:main"
