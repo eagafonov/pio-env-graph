@@ -1,0 +1,515 @@
+digraph platformio {
+    rankdir=RL
+    node [shape=box]
+
+    "env" [label="env", style=filled, fillcolor="#e2e2e2"]
+    "arduino_base" [label="arduino_base\nframework: arduino", style=filled, fillcolor="#e2e2e2"]
+    "networking_base" [label="networking_base", style=filled, fillcolor="#e2e2e2"]
+    "networking_extra" [label="networking_extra", style=filled, fillcolor="#e2e2e2"]
+    "radiolib_base" [label="radiolib_base", style=filled, fillcolor="#e2e2e2"]
+    "device-ui_base" [label="device-ui_base", style=filled, fillcolor="#e2e2e2"]
+    "environmental_base" [label="environmental_base", style=filled, fillcolor="#e2e2e2"]
+    "environmental_extra_common" [label="environmental_extra_common", style=filled, fillcolor="#e2e2e2"]
+    "environmental_extra" [label="environmental_extra", style=filled, fillcolor="#e2e2e2"]
+    "environmental_extra_no_bsec" [label="environmental_extra_no_bsec", style=filled, fillcolor="#e2e2e2"]
+    "esp32_common" [label="esp32_common\nplatform: \nplatformio/espressif32@6.13.0", style=filled, fillcolor="#e2e2e2"]
+    "esp32_base" [label="esp32_base", style=filled, fillcolor="#e2e2e2"]
+    "esp32c3_base" [label="esp32c3_base", style=filled, fillcolor="#e2e2e2"]
+    "esp32c6_base" [label="esp32c6_base\nplatform: \nhttps://github.com/Jason2866/platform-espressif32/archive/22faa566df8c789000f8136cd8d0aca49617af55.zip", style=filled, fillcolor="#e2e2e2"]
+    "esp32s2_base" [label="esp32s2_base", style=filled, fillcolor="#e2e2e2"]
+    "esp32s3_base" [label="esp32s3_base", style=filled, fillcolor="#e2e2e2"]
+    "portduino_base" [label="portduino_base\nplatform: \nhttps://github.com/meshtastic/platform-native/archive/f566d364204416cdbf298e349213f7d551f793d9.zip\nframework: arduino", style=filled, fillcolor="#e2e2e2"]
+    "nrf52_base" [label="nrf52_base\nplatform: \nplatformio/nordicnrf52@10.11.0", style=filled, fillcolor="#e2e2e2"]
+    "nrf52832_base" [label="nrf52832_base", style=filled, fillcolor="#e2e2e2"]
+    "nrf52840_base" [label="nrf52840_base", style=filled, fillcolor="#e2e2e2"]
+    "rp2040_base" [label="rp2040_base\nplatform: \nhttps://github.com/maxgerhardt/platform-raspberrypi#cc24cfef37ed22ca9f2a6aead28c2deb76c39f24", style=filled, fillcolor="#e2e2e2"]
+    "rp2350_base" [label="rp2350_base\nplatform: \nhttps://github.com/maxgerhardt/platform-raspberrypi#cc24cfef37ed22ca9f2a6aead28c2deb76c39f24", style=filled, fillcolor="#e2e2e2"]
+    "stm32_base" [label="stm32_base\nplatform: \nplatformio/ststm32@19.5.0", style=filled, fillcolor="#e2e2e2"]
+    "env:betafpv_2400_tx_micro" [label="env:betafpv_2400_tx_micro\nboard: esp32doit-devkit-v1", style=filled, fillcolor="#d4edda"]
+    "env:betafpv_900_tx_nano" [label="env:betafpv_900_tx_nano\nboard: esp32doit-devkit-v1", style=filled, fillcolor="#d4edda"]
+    "env:chatter2" [label="env:chatter2\nboard: esp32doit-devkit-v1", style=filled, fillcolor="#d4edda"]
+    "env:hackerboxes-esp32-io" [label="env:hackerboxes-esp32-io\nboard: esp32dev", style=filled, fillcolor="#d4edda"]
+    "env:heltec-v1" [label="env:heltec-v1\nboard: heltec_wifi_lora_32", style=filled, fillcolor="#d4edda"]
+    "env:heltec-v2_0" [label="env:heltec-v2_0\nboard: heltec_wifi_lora_32_V2", style=filled, fillcolor="#d4edda"]
+    "env:heltec-v2_1" [label="env:heltec-v2_1\nboard: heltec_wifi_lora_32_V2", style=filled, fillcolor="#d4edda"]
+    "env:heltec-wireless-bridge" [label="env:heltec-wireless-bridge\nboard: heltec_wifi_lora_32", style=filled, fillcolor="#d4edda"]
+    "env:heltec-wsl-v2_1" [label="env:heltec-wsl-v2_1\nboard: heltec_wireless_stick_lite", style=filled, fillcolor="#d4edda"]
+    "env:m5stack-core" [label="env:m5stack-core\nboard: m5stack-core-esp32", style=filled, fillcolor="#d4edda"]
+    "env:m5stack-coreink" [label="env:m5stack-coreink\nboard: m5stack-coreink", style=filled, fillcolor="#d4edda"]
+    "env:nano-g1" [label="env:nano-g1\nboard: ttgo-t-beam", style=filled, fillcolor="#d4edda"]
+    "env:nano-g1-explorer" [label="env:nano-g1-explorer\nboard: ttgo-t-beam", style=filled, fillcolor="#d4edda"]
+    "env:radiomaster_900_bandit" [label="env:radiomaster_900_bandit\nboard: esp32doit-devkit-v1", style=filled, fillcolor="#d4edda"]
+    "env:radiomaster_900_bandit_micro" [label="env:radiomaster_900_bandit_micro\nboard: esp32doit-devkit-v1", style=filled, fillcolor="#d4edda"]
+    "env:radiomaster_900_bandit_nano" [label="env:radiomaster_900_bandit_nano\nboard: esp32doit-devkit-v1", style=filled, fillcolor="#d4edda"]
+    "env:rak11200" [label="env:rak11200\nboard: wiscore_rak11200", style=filled, fillcolor="#d4edda"]
+    "env:station-g1" [label="env:station-g1\nboard: ttgo-t-beam", style=filled, fillcolor="#d4edda"]
+    "env:tbeam" [label="env:tbeam\nboard: ttgo-t-beam", style=filled, fillcolor="#d4edda"]
+    "env:tbeam-displayshield" [label="env:tbeam-displayshield", style=filled, fillcolor="#d4edda"]
+    "env:tbeam0_7" [label="env:tbeam0_7\nboard: ttgo-t-beam", style=filled, fillcolor="#d4edda"]
+    "env:tlora-v1" [label="env:tlora-v1\nboard: ttgo-lora32-v1", style=filled, fillcolor="#d4edda"]
+    "env:tlora_v1_3" [label="env:tlora_v1_3\nboard: ttgo-lora32-v1", style=filled, fillcolor="#d4edda"]
+    "env:tlora-v2" [label="env:tlora-v2\nboard: ttgo-lora32-v1", style=filled, fillcolor="#d4edda"]
+    "env:tlora-v2-1-1_6" [label="env:tlora-v2-1-1_6\nboard: ttgo-lora32-v21", style=filled, fillcolor="#d4edda"]
+    "env:sugarcube" [label="env:sugarcube", style=filled, fillcolor="#d4edda"]
+    "env:tlora-v2-1-1_6-tcxo" [label="env:tlora-v2-1-1_6-tcxo\nboard: ttgo-lora32-v21", style=filled, fillcolor="#d4edda"]
+    "env:tlora-v2-1-1_8" [label="env:tlora-v2-1-1_8\nboard: ttgo-lora32-v21", style=filled, fillcolor="#d4edda"]
+    "env:tlora-v3-3-0-tcxo" [label="env:tlora-v3-3-0-tcxo\nboard: ttgo-lora32-v21", style=filled, fillcolor="#d4edda"]
+    "env:trackerd" [label="env:trackerd\nboard: pico32", style=filled, fillcolor="#d4edda"]
+    "env:wiphone" [label="env:wiphone\nboard: wiphone", style=filled, fillcolor="#d4edda"]
+    "env:ai-c3" [label="env:ai-c3\nboard: esp32-c3-devkitm-1", style=filled, fillcolor="#d4edda"]
+    "env:hackerboxes-esp32c3-oled" [label="env:hackerboxes-esp32c3-oled\nboard: esp32-c3-devkitm-1", style=filled, fillcolor="#d4edda"]
+    "env:heltec-ht62-esp32c3-sx1262" [label="env:heltec-ht62-esp32c3-sx1262\nboard: esp32-c3-devkitm-1", style=filled, fillcolor="#d4edda"]
+    "env:heltec-hru-3601" [label="env:heltec-hru-3601\nboard: adafruit_qtpy_esp32c3", style=filled, fillcolor="#d4edda"]
+    "env:m5stack-stamp-c3" [label="env:m5stack-stamp-c3\nboard: esp32-c3-devkitm-1", style=filled, fillcolor="#d4edda"]
+    "env:m5stack-unitc6l" [label="env:m5stack-unitc6l\nboard: esp32-c6-devkitc-1", style=filled, fillcolor="#d4edda"]
+    "env:tlora-c6" [label="env:tlora-c6\nboard: esp32-c6-devkitm-1", style=filled, fillcolor="#d4edda"]
+    "env:nugget-s2-lora" [label="env:nugget-s2-lora\nboard: lolin_s2_mini", style=filled, fillcolor="#d4edda"]
+    "env:CDEBYTE_EoRa-Hub" [label="env:CDEBYTE_EoRa-Hub\nboard: CDEBYTE_EoRa-Hub", style=filled, fillcolor="#d4edda"]
+    "env:CDEBYTE_EoRa-S3" [label="env:CDEBYTE_EoRa-S3\nboard: CDEBYTE_EoRa-S3", style=filled, fillcolor="#d4edda"]
+    "env:EBYTE_ESP32-S3" [label="env:EBYTE_ESP32-S3\nboard: ESP32-S3-WROOM-1-N4", style=filled, fillcolor="#d4edda"]
+    "env:thinknode_m2" [label="env:thinknode_m2\nboard: ESP32-S3-WROOM-1-N4", style=filled, fillcolor="#d4edda"]
+    "env:thinknode_m5" [label="env:thinknode_m5\nboard: ESP32-S3-WROOM-1-N4", style=filled, fillcolor="#d4edda"]
+    "env:bpi_picow_esp32_s3" [label="env:bpi_picow_esp32_s3\nboard: bpi_picow_esp32_s3", style=filled, fillcolor="#d4edda"]
+    "env:crowpanel-esp32s3-5-epaper" [label="env:crowpanel-esp32s3-5-epaper\nboard: esp32-s3-devkitc-1", style=filled, fillcolor="#d4edda"]
+    "env:crowpanel-esp32s3-4-epaper" [label="env:crowpanel-esp32s3-4-epaper\nboard: esp32-s3-devkitc-1", style=filled, fillcolor="#d4edda"]
+    "env:crowpanel-esp32s3-2-epaper" [label="env:crowpanel-esp32s3-2-epaper\nboard: esp32-s3-devkitc-1", style=filled, fillcolor="#d4edda"]
+    "env:dreamcatcher" [label="env:dreamcatcher\nboard: esp32s3box", style=filled, fillcolor="#d4edda"]
+    "env:dreamcatcher-2206" [label="env:dreamcatcher-2206\nboard: esp32s3box", style=filled, fillcolor="#d4edda"]
+    "crowpanel_base" [label="crowpanel_base\nboard: crowpanel", style=filled, fillcolor="#e2e2e2"]
+    "crowpanel_small_esp32s3_base" [label="crowpanel_small_esp32s3_base", style=filled, fillcolor="#e2e2e2"]
+    "crowpanel_large_esp32s3_base" [label="crowpanel_large_esp32s3_base", style=filled, fillcolor="#e2e2e2"]
+    "env:elecrow-adv-24-28-tft" [label="env:elecrow-adv-24-28-tft", style=filled, fillcolor="#d4edda"]
+    "env:elecrow-adv-35-tft" [label="env:elecrow-adv-35-tft", style=filled, fillcolor="#d4edda"]
+    "env:elecrow-adv1-43-50-70-tft" [label="env:elecrow-adv1-43-50-70-tft", style=filled, fillcolor="#d4edda"]
+    "env:ESP32-S3-Pico" [label="env:ESP32-S3-Pico\nboard: esp32-s3-pico", style=filled, fillcolor="#d4edda"]
+    "env:hackaday-communicator" [label="env:hackaday-communicator\nboard: hackaday-communicator", style=filled, fillcolor="#d4edda"]
+    "env:heltec_capsule_sensor_v3" [label="env:heltec_capsule_sensor_v3\nboard: heltec_wifi_lora_32_V3", style=filled, fillcolor="#d4edda"]
+    "env:heltec_sensor_hub" [label="env:heltec_sensor_hub\nboard: heltec_wifi_lora_32_V3", style=filled, fillcolor="#d4edda"]
+    "env:heltec-v3" [label="env:heltec-v3\nboard: heltec_wifi_lora_32_V3", style=filled, fillcolor="#d4edda"]
+    "heltec_v4_base" [label="heltec_v4_base\nboard: heltec_v4", style=filled, fillcolor="#e2e2e2"]
+    "env:heltec-v4" [label="env:heltec-v4", style=filled, fillcolor="#d4edda"]
+    "env:heltec-v4-tft" [label="env:heltec-v4-tft", style=filled, fillcolor="#d4edda"]
+    "env:heltec-vision-master-e213" [label="env:heltec-vision-master-e213\nboard: heltec_vision_master_e213", style=filled, fillcolor="#d4edda"]
+    "env:heltec-vision-master-e213-inkhud" [label="env:heltec-vision-master-e213-inkhud\nboard: heltec_vision_master_e213", style=filled, fillcolor="#d4edda"]
+    "env:heltec-vision-master-e290" [label="env:heltec-vision-master-e290\nboard: heltec_vision_master_e290", style=filled, fillcolor="#d4edda"]
+    "env:heltec-vision-master-e290-inkhud" [label="env:heltec-vision-master-e290-inkhud\nboard: heltec_vision_master_e290", style=filled, fillcolor="#d4edda"]
+    "env:heltec-vision-master-t190" [label="env:heltec-vision-master-t190\nboard: heltec_vision_master_t190", style=filled, fillcolor="#d4edda"]
+    "env:heltec-wireless-paper" [label="env:heltec-wireless-paper\nboard: heltec_wifi_lora_32_V3", style=filled, fillcolor="#d4edda"]
+    "env:heltec-wireless-paper-inkhud" [label="env:heltec-wireless-paper-inkhud\nboard: heltec_wifi_lora_32_V3", style=filled, fillcolor="#d4edda"]
+    "env:heltec-wireless-paper-v1_0" [label="env:heltec-wireless-paper-v1_0\nboard: heltec_wifi_lora_32_V3", style=filled, fillcolor="#d4edda"]
+    "env:heltec-wireless-tracker" [label="env:heltec-wireless-tracker\nboard: heltec_wireless_tracker", style=filled, fillcolor="#d4edda"]
+    "env:heltec-wireless-tracker-V1-0" [label="env:heltec-wireless-tracker-V1-0\nboard: heltec_wireless_tracker", style=filled, fillcolor="#d4edda"]
+    "env:heltec-wireless-tracker-v2" [label="env:heltec-wireless-tracker-v2\nboard: heltec_wireless_tracker_v2", style=filled, fillcolor="#d4edda"]
+    "env:heltec-wsl-v3" [label="env:heltec-wsl-v3\nboard: heltec_wifi_lora_32_V3", style=filled, fillcolor="#d4edda"]
+    "env:icarus" [label="env:icarus\nboard: icarus", style=filled, fillcolor="#d4edda"]
+    "env:link32-s3-v1" [label="env:link32-s3-v1\nboard: esp32-s3-devkitc-1", style=filled, fillcolor="#d4edda"]
+    "env:m5stack-cardputer-adv" [label="env:m5stack-cardputer-adv\nboard: m5stack-stamps3", style=filled, fillcolor="#d4edda"]
+    "env:m5stack-cores3" [label="env:m5stack-cores3\nboard: m5stack-cores3", style=filled, fillcolor="#d4edda"]
+    "mesh_tab_base" [label="mesh_tab_base\nboard: mesh-tab", style=filled, fillcolor="#e2e2e2"]
+    "mesh_tab_xpt2046" [label="mesh_tab_xpt2046", style=filled, fillcolor="#e2e2e2"]
+    "mesh_tab_ft5x06" [label="mesh_tab_ft5x06", style=filled, fillcolor="#e2e2e2"]
+    "env:mesh-tab-3-2-TN-resistive" [label="env:mesh-tab-3-2-TN-resistive", style=filled, fillcolor="#d4edda"]
+    "env:mesh-tab-3-2-IPS-resistive" [label="env:mesh-tab-3-2-IPS-resistive", style=filled, fillcolor="#d4edda"]
+    "env:mesh-tab-3-5-IPS-resistive" [label="env:mesh-tab-3-5-IPS-resistive", style=filled, fillcolor="#d4edda"]
+    "env:mesh-tab-3-5-TN-resistive" [label="env:mesh-tab-3-5-TN-resistive", style=filled, fillcolor="#d4edda"]
+    "env:mesh-tab-3-2-IPS-capacitive" [label="env:mesh-tab-3-2-IPS-capacitive", style=filled, fillcolor="#d4edda"]
+    "env:mesh-tab-3-5-IPS-capacitive" [label="env:mesh-tab-3-5-IPS-capacitive", style=filled, fillcolor="#d4edda"]
+    "env:mesh-tab-4-0-IPS-capacitive" [label="env:mesh-tab-4-0-IPS-capacitive", style=filled, fillcolor="#d4edda"]
+    "env:mini-epaper-s3" [label="env:mini-epaper-s3\nboard: mini-epaper-s3", style=filled, fillcolor="#d4edda"]
+    "env:mini-epaper-s3-inkhud" [label="env:mini-epaper-s3-inkhud\nboard: mini-epaper-s3", style=filled, fillcolor="#d4edda"]
+    "env:nibble-esp32" [label="env:nibble-esp32\nboard: esp32-s3-zero", style=filled, fillcolor="#d4edda"]
+    "env:nugget-s3-lora" [label="env:nugget-s3-lora\nboard: lolin_s3_mini", style=filled, fillcolor="#d4edda"]
+    "env:picomputer-s3" [label="env:picomputer-s3\nboard: bpi_picow_esp32_s3", style=filled, fillcolor="#d4edda"]
+    "env:picomputer-s3-tft" [label="env:picomputer-s3-tft", style=filled, fillcolor="#d4edda"]
+    "env:rak3312" [label="env:rak3312\nboard: wiscore_rak3312", style=filled, fillcolor="#d4edda"]
+    "env:rak3112" [label="env:rak3112\nboard: wiscore_rak3312", style=filled, fillcolor="#d4edda"]
+    "ft5x06" [label="ft5x06", style=filled, fillcolor="#e2e2e2"]
+    "env:rak_wismesh_tap_v2" [label="env:rak_wismesh_tap_v2\nboard: wiscore_rak3312", style=filled, fillcolor="#d4edda"]
+    "env:rak_wismesh_tap_v2-tft" [label="env:rak_wismesh_tap_v2-tft", style=filled, fillcolor="#d4edda"]
+    "env:seeed-sensecap-indicator" [label="env:seeed-sensecap-indicator\nboard: seeed-sensecap-indicator", style=filled, fillcolor="#d4edda"]
+    "env:seeed-sensecap-indicator-tft" [label="env:seeed-sensecap-indicator-tft", style=filled, fillcolor="#d4edda"]
+    "env:seeed-xiao-s3" [label="env:seeed-xiao-s3\nboard: seeed-xiao-s3", style=filled, fillcolor="#d4edda"]
+    "env:station-g2" [label="env:station-g2\nboard: station-g2", style=filled, fillcolor="#d4edda"]
+    "env:t-beam-1w" [label="env:t-beam-1w\nboard: t-beam-1w", style=filled, fillcolor="#d4edda"]
+    "env:t-deck" [label="env:t-deck\nboard: t-deck", style=filled, fillcolor="#d4edda"]
+    "env:t-deck-tft" [label="env:t-deck-tft", style=filled, fillcolor="#d4edda"]
+    "env:t-deck-pro" [label="env:t-deck-pro\nboard: t-deck-pro", style=filled, fillcolor="#d4edda"]
+    "env:t-eth-elite" [label="env:t-eth-elite\nboard: esp32s3box", style=filled, fillcolor="#d4edda"]
+    "env:t-watch-s3" [label="env:t-watch-s3\nboard: t-watch-s3", style=filled, fillcolor="#d4edda"]
+    "t5s3_epaper_base" [label="t5s3_epaper_base\nboard: t5-epaper-s3", style=filled, fillcolor="#e2e2e2"]
+    "env:t5s3_epaper_inkhud" [label="env:t5s3_epaper_inkhud", style=filled, fillcolor="#d4edda"]
+    "env:t5s3-epaper-v1" [label="env:t5s3-epaper-v1", style=filled, fillcolor="#d4edda"]
+    "env:t5s3-epaper-v2" [label="env:t5s3-epaper-v2", style=filled, fillcolor="#d4edda"]
+    "env:tbeam-s3-core" [label="env:tbeam-s3-core\nboard: tbeam-s3-core", style=filled, fillcolor="#d4edda"]
+    "env:tlora-pager" [label="env:tlora-pager\nboard: t-deck-pro ; same as T-Deck Pro", style=filled, fillcolor="#d4edda"]
+    "env:tlora-pager-tft" [label="env:tlora-pager-tft", style=filled, fillcolor="#d4edda"]
+    "env:tlora-t3s3-epaper" [label="env:tlora-t3s3-epaper\nboard: tlora-t3s3-v1", style=filled, fillcolor="#d4edda"]
+    "env:tlora-t3s3-epaper-inkhud" [label="env:tlora-t3s3-epaper-inkhud\nboard: tlora-t3s3-v1", style=filled, fillcolor="#d4edda"]
+    "env:tlora-t3s3-v1" [label="env:tlora-t3s3-v1\nboard: tlora-t3s3-v1", style=filled, fillcolor="#d4edda"]
+    "env:tracksenger" [label="env:tracksenger\nboard: heltec_wireless_tracker", style=filled, fillcolor="#d4edda"]
+    "env:tracksenger-lcd" [label="env:tracksenger-lcd\nboard: heltec_wireless_tracker", style=filled, fillcolor="#d4edda"]
+    "env:tracksenger-oled" [label="env:tracksenger-oled\nboard: heltec_wireless_tracker", style=filled, fillcolor="#d4edda"]
+    "env:unphone" [label="env:unphone\nboard: unphone", style=filled, fillcolor="#d4edda"]
+    "env:unphone-tft" [label="env:unphone-tft", style=filled, fillcolor="#d4edda"]
+    "native_base" [label="native_base\nboard: cross_platform", style=filled, fillcolor="#e2e2e2"]
+    "env:native" [label="env:native", style=filled, fillcolor="#d4edda"]
+    "env:native-tft" [label="env:native-tft", style=filled, fillcolor="#d4edda"]
+    "env:native-fb" [label="env:native-fb", style=filled, fillcolor="#d4edda"]
+    "env:native-tft-debug" [label="env:native-tft-debug", style=filled, fillcolor="#d4edda"]
+    "env:coverage" [label="env:coverage", style=filled, fillcolor="#d4edda"]
+    "env:buildroot" [label="env:buildroot\nboard: buildroot", style=filled, fillcolor="#d4edda"]
+    "env:pca10059_diy_eink" [label="env:pca10059_diy_eink\nboard: nordic_pca10059", style=filled, fillcolor="#d4edda"]
+    "env:thinknode_m1" [label="env:thinknode_m1\nboard: ThinkNode-M1", style=filled, fillcolor="#d4edda"]
+    "env:thinknode_m1-inkhud" [label="env:thinknode_m1-inkhud\nboard: ThinkNode-M1", style=filled, fillcolor="#d4edda"]
+    "env:thinknode_m3" [label="env:thinknode_m3\nboard: ThinkNode-M3", style=filled, fillcolor="#d4edda"]
+    "env:thinknode_m4" [label="env:thinknode_m4\nboard: ThinkNode-M4", style=filled, fillcolor="#d4edda"]
+    "env:thinknode_m6" [label="env:thinknode_m6\nboard: ThinkNode-M6", style=filled, fillcolor="#d4edda"]
+    "env:ME25LS01-4Y10TD" [label="env:ME25LS01-4Y10TD\nboard: me25ls01-4y10td", style=filled, fillcolor="#d4edda"]
+    "env:ME25LS01-4Y10TD_e-ink" [label="env:ME25LS01-4Y10TD_e-ink\nboard: me25ls01-4y10td", style=filled, fillcolor="#d4edda"]
+    "env:ms24sf1" [label="env:ms24sf1\nboard: ms24sf1", style=filled, fillcolor="#d4edda"]
+    "env:makerpython_nrf52840_sx1280_eink" [label="env:makerpython_nrf52840_sx1280_eink\nboard: nordic_pca10059", style=filled, fillcolor="#d4edda"]
+    "env:makerpython_nrf52840_sx1280_oled" [label="env:makerpython_nrf52840_sx1280_oled\nboard: nordic_pca10059", style=filled, fillcolor="#d4edda"]
+    "env:TWC_mesh_v4" [label="env:TWC_mesh_v4\nboard: nordic_pca10059", style=filled, fillcolor="#d4edda"]
+    "env:canaryone" [label="env:canaryone\nboard: canaryone", style=filled, fillcolor="#d4edda"]
+    "env:minimesh_lite" [label="env:minimesh_lite\nboard: minimesh_lite", style=filled, fillcolor="#d4edda"]
+    "env:feather_diy" [label="env:feather_diy\nboard: adafruit_feather_nrf52840", style=filled, fillcolor="#d4edda"]
+    "env:gat562_mesh_trial_tracker" [label="env:gat562_mesh_trial_tracker\nboard: gat562_mesh_trial_tracker", style=filled, fillcolor="#d4edda"]
+    "env:heltec-mesh-node-t096" [label="env:heltec-mesh-node-t096\nboard: heltec_mesh_node_t096", style=filled, fillcolor="#d4edda"]
+    "env:heltec-mesh-node-t114" [label="env:heltec-mesh-node-t114\nboard: heltec_mesh_node_t114", style=filled, fillcolor="#d4edda"]
+    "env:heltec-mesh-node-t114-inkhud" [label="env:heltec-mesh-node-t114-inkhud\nboard: heltec_mesh_node_t114", style=filled, fillcolor="#d4edda"]
+    "env:heltec-mesh-pocket-5000" [label="env:heltec-mesh-pocket-5000\nboard: heltec_mesh_pocket", style=filled, fillcolor="#d4edda"]
+    "env:heltec-mesh-pocket-5000-inkhud" [label="env:heltec-mesh-pocket-5000-inkhud\nboard: heltec_mesh_pocket", style=filled, fillcolor="#d4edda"]
+    "env:heltec-mesh-pocket-10000" [label="env:heltec-mesh-pocket-10000\nboard: heltec_mesh_pocket", style=filled, fillcolor="#d4edda"]
+    "env:heltec-mesh-pocket-10000-inkhud" [label="env:heltec-mesh-pocket-10000-inkhud\nboard: heltec_mesh_pocket", style=filled, fillcolor="#d4edda"]
+    "heltec_mesh_solar_base" [label="heltec_mesh_solar_base\nboard: heltec_mesh_solar", style=filled, fillcolor="#e2e2e2"]
+    "env:heltec-mesh-solar" [label="env:heltec-mesh-solar", style=filled, fillcolor="#d4edda"]
+    "env:heltec-mesh-solar-eink" [label="env:heltec-mesh-solar-eink", style=filled, fillcolor="#d4edda"]
+    "env:heltec-mesh-solar-inkhud" [label="env:heltec-mesh-solar-inkhud", style=filled, fillcolor="#d4edda"]
+    "env:heltec-mesh-solar-oled" [label="env:heltec-mesh-solar-oled", style=filled, fillcolor="#d4edda"]
+    "env:heltec-mesh-solar-tft" [label="env:heltec-mesh-solar-tft", style=filled, fillcolor="#d4edda"]
+    "env:meshlink" [label="env:meshlink\nboard: meshlink", style=filled, fillcolor="#d4edda"]
+    "env:meshlink_eink" [label="env:meshlink_eink\nboard: meshlink", style=filled, fillcolor="#d4edda"]
+    "env:meshtiny" [label="env:meshtiny\nboard: meshtiny", style=filled, fillcolor="#d4edda"]
+    "env:monteops_hw1" [label="env:monteops_hw1\nboard: wiscore_rak4631", style=filled, fillcolor="#d4edda"]
+    "env:muzi-base" [label="env:muzi-base\nboard: muzi-base", style=filled, fillcolor="#d4edda"]
+    "env:nano-g2-ultra" [label="env:nano-g2-ultra\nboard: nano-g2-ultra", style=filled, fillcolor="#d4edda"]
+    "env:r1-neo" [label="env:r1-neo\nboard: r1-neo", style=filled, fillcolor="#d4edda"]
+    "env:rak2560" [label="env:rak2560\nboard: wiscore_rak4631", style=filled, fillcolor="#d4edda"]
+    "env:rak3401-1watt" [label="env:rak3401-1watt\nboard: wiscore_rak4631", style=filled, fillcolor="#d4edda"]
+    "env:rak4631" [label="env:rak4631\nboard: wiscore_rak4631", style=filled, fillcolor="#d4edda"]
+    "env:rak4631_dbg" [label="env:rak4631_dbg", style=filled, fillcolor="#d4edda"]
+    "env:rak4631_eink" [label="env:rak4631_eink\nboard: wiscore_rak4631", style=filled, fillcolor="#d4edda"]
+    "env:rak4631_eink_onrxtx" [label="env:rak4631_eink_onrxtx\nboard: wiscore_rak4631", style=filled, fillcolor="#d4edda"]
+    "env:rak4631_eth_gw" [label="env:rak4631_eth_gw\nboard: wiscore_rak4631", style=filled, fillcolor="#d4edda"]
+    "env:rak4631_eth_gw_dbg" [label="env:rak4631_eth_gw_dbg", style=filled, fillcolor="#d4edda"]
+    "env:rak4631_nomadstar_meteor_pro" [label="env:rak4631_nomadstar_meteor_pro\nboard: wiscore_rak4631", style=filled, fillcolor="#d4edda"]
+    "env:rak4631_nomadstar_meteor_pro_dbg" [label="env:rak4631_nomadstar_meteor_pro_dbg", style=filled, fillcolor="#d4edda"]
+    "env:rak_wismeshtag" [label="env:rak_wismeshtag\nboard: wiscore_rak4631", style=filled, fillcolor="#d4edda"]
+    "env:rak_wismeshtap" [label="env:rak_wismeshtap\nboard: wiscore_rak4631", style=filled, fillcolor="#d4edda"]
+    "env:seeed_solar_node" [label="env:seeed_solar_node\nboard: seeed_solar_node", style=filled, fillcolor="#d4edda"]
+    "env:seeed_wio_tracker_L1" [label="env:seeed_wio_tracker_L1\nboard: seeed_wio_tracker_L1", style=filled, fillcolor="#d4edda"]
+    "env:seeed_wio_tracker_L1_eink" [label="env:seeed_wio_tracker_L1_eink\nboard: seeed_wio_tracker_L1", style=filled, fillcolor="#d4edda"]
+    "env:seeed_wio_tracker_L1_eink-inkhud" [label="env:seeed_wio_tracker_L1_eink-inkhud\nboard: seeed_wio_tracker_L1", style=filled, fillcolor="#d4edda"]
+    "env:seeed_xiao_nrf52840_kit" [label="env:seeed_xiao_nrf52840_kit\nboard: xiao_ble_sense", style=filled, fillcolor="#d4edda"]
+    "env:seeed_xiao_nrf52840_kit_i2c" [label="env:seeed_xiao_nrf52840_kit_i2c", style=filled, fillcolor="#d4edda"]
+    "env:t-echo" [label="env:t-echo\nboard: t-echo", style=filled, fillcolor="#d4edda"]
+    "env:t-echo-inkhud" [label="env:t-echo-inkhud\nboard: t-echo", style=filled, fillcolor="#d4edda"]
+    "env:t-echo-lite" [label="env:t-echo-lite\nboard: t-echo", style=filled, fillcolor="#d4edda"]
+    "env:t-echo-plus" [label="env:t-echo-plus\nboard: t-echo", style=filled, fillcolor="#d4edda"]
+    "env:tracker-t1000-e" [label="env:tracker-t1000-e\nboard: tracker-t1000-e", style=filled, fillcolor="#d4edda"]
+    "env:wio-sdk-wm1110" [label="env:wio-sdk-wm1110\nboard: wio-sdk-wm1110", style=filled, fillcolor="#d4edda"]
+    "env:wio-t1000-s" [label="env:wio-t1000-s\nboard: wio-t1000-s", style=filled, fillcolor="#d4edda"]
+    "env:wio-tracker-wm1110" [label="env:wio-tracker-wm1110\nboard: wio-tracker-wm1110", style=filled, fillcolor="#d4edda"]
+    "env:challenger_2040_lora" [label="env:challenger_2040_lora\nboard: challenger_2040_lora", style=filled, fillcolor="#d4edda"]
+    "env:catsniffer" [label="env:catsniffer\nboard: rpipico", style=filled, fillcolor="#d4edda"]
+    "env:feather_rp2040_rfm95" [label="env:feather_rp2040_rfm95\nboard: adafruit_feather", style=filled, fillcolor="#d4edda"]
+    "env:nibble-rp2040" [label="env:nibble-rp2040\nboard: rpipico", style=filled, fillcolor="#d4edda"]
+    "env:rak11310" [label="env:rak11310\nboard: rakwireless_rak11300", style=filled, fillcolor="#d4edda"]
+    "env:rp2040-lora" [label="env:rp2040-lora\nboard: rpipico", style=filled, fillcolor="#d4edda"]
+    "env:pico" [label="env:pico\nboard: rpipico", style=filled, fillcolor="#d4edda"]
+    "env:pico_slowclock" [label="env:pico_slowclock\nboard: rpipico", style=filled, fillcolor="#d4edda"]
+    "env:picow" [label="env:picow\nboard: rpipicow", style=filled, fillcolor="#d4edda"]
+    "env:senselora_rp2040" [label="env:senselora_rp2040\nboard: rpipico", style=filled, fillcolor="#d4edda"]
+    "env:pico2" [label="env:pico2\nboard: rpipico2", style=filled, fillcolor="#d4edda"]
+    "env:pico2w" [label="env:pico2w\nboard: rpipico2w", style=filled, fillcolor="#d4edda"]
+    "env:CDEBYTE_E77-MBL" [label="env:CDEBYTE_E77-MBL\nboard: ebyte_e77_dev", style=filled, fillcolor="#d4edda"]
+    "env:milesight_gs301" [label="env:milesight_gs301\nboard: wiscore_rak3172 ; Convenient choice as the same USART is used for programming/debug", style=filled, fillcolor="#d4edda"]
+    "env:rak3172" [label="env:rak3172\nboard: wiscore_rak3172", style=filled, fillcolor="#d4edda"]
+    "env:russell" [label="env:russell\nboard: wiscore_rak3172", style=filled, fillcolor="#d4edda"]
+    "env:wio-e5" [label="env:wio-e5\nboard: lora_e5_dev_board", style=filled, fillcolor="#d4edda"]
+    "env:9m2ibr_aprs_lora_tracker" [label="env:9m2ibr_aprs_lora_tracker\nboard: esp32doit-devkit-v1", style=filled, fillcolor="#d4edda"]
+    "env:meshtastic-dr-dev" [label="env:meshtastic-dr-dev\nboard: esp32doit-devkit-v1", style=filled, fillcolor="#d4edda"]
+    "env:hydra" [label="env:hydra\nboard: esp32doit-devkit-v1", style=filled, fillcolor="#d4edda"]
+    "env:meshtastic-diy-v1" [label="env:meshtastic-diy-v1\nboard: esp32doit-devkit-v1", style=filled, fillcolor="#d4edda"]
+    "env:meshtastic-diy-v1_1" [label="env:meshtastic-diy-v1_1\nboard: esp32doit-devkit-v1", style=filled, fillcolor="#d4edda"]
+    "env:esp32c3_super_mini" [label="env:esp32c3_super_mini\nboard: esp32-c3-devkitm-1", style=filled, fillcolor="#d4edda"]
+    "env:my-esp32s3-diy-eink" [label="env:my-esp32s3-diy-eink\nboard: my_esp32s3_diy_eink", style=filled, fillcolor="#d4edda"]
+    "env:my-esp32s3-diy-oled" [label="env:my-esp32s3-diy-oled\nboard: my-esp32s3-diy-oled", style=filled, fillcolor="#d4edda"]
+    "env:t-energy-s3_e22" [label="env:t-energy-s3_e22\nboard: esp32-s3-devkitc-1", style=filled, fillcolor="#d4edda"]
+    "env:WashTastic" [label="env:WashTastic\nboard: promicro-nrf52840", style=filled, fillcolor="#d4edda"]
+    "env:nrf52_promicro_diy_tcxo" [label="env:nrf52_promicro_diy_tcxo\nboard: promicro-nrf52840", style=filled, fillcolor="#d4edda"]
+    "env:nrf52_promicro_diy-inkhud" [label="env:nrf52_promicro_diy-inkhud\nboard: promicro-nrf52840", style=filled, fillcolor="#d4edda"]
+    "env:seeed_xiao_nrf52840_btb" [label="env:seeed_xiao_nrf52840_btb", style=filled, fillcolor="#d4edda"]
+    "env:seeed_xiao_nrf52840_e22_900m30s" [label="env:seeed_xiao_nrf52840_e22_900m30s", style=filled, fillcolor="#d4edda"]
+    "env:seeed_xiao_nrf52840_e22_900m33s" [label="env:seeed_xiao_nrf52840_e22_900m33s", style=filled, fillcolor="#d4edda"]
+    "env:xiao_ble" [label="env:xiao_ble", style=filled, fillcolor="#d4edda"]
+    "env:xiao_ble_30db" [label="env:xiao_ble_30db", style=filled, fillcolor="#d4edda"]
+    "env:xiao_ble_33db" [label="env:xiao_ble_33db", style=filled, fillcolor="#d4edda"]
+    "inkhud" [label="inkhud", style=filled, fillcolor="#e2e2e2"]
+
+    "esp32_common" -> "arduino_base"
+    "esp32_base" -> "esp32_common"
+    "esp32c3_base" -> "esp32_common"
+    "esp32c6_base" -> "esp32_common"
+    "esp32s2_base" -> "esp32_common"
+    "esp32s3_base" -> "esp32_common"
+    "nrf52_base" -> "arduino_base"
+    "nrf52832_base" -> "nrf52_base"
+    "nrf52840_base" -> "nrf52_base"
+    "rp2040_base" -> "arduino_base"
+    "rp2350_base" -> "arduino_base"
+    "stm32_base" -> "arduino_base"
+    "env:betafpv_2400_tx_micro" -> "esp32_base"
+    "env:betafpv_900_tx_nano" -> "esp32_base"
+    "env:chatter2" -> "esp32_base"
+    "env:hackerboxes-esp32-io" -> "esp32_base"
+    "env:heltec-v1" -> "esp32_base"
+    "env:heltec-v2_0" -> "esp32_base"
+    "env:heltec-v2_1" -> "esp32_base"
+    "env:heltec-wireless-bridge" -> "esp32_base"
+    "env:heltec-wsl-v2_1" -> "esp32_base"
+    "env:m5stack-core" -> "esp32_base"
+    "env:m5stack-coreink" -> "esp32_base"
+    "env:nano-g1" -> "esp32_base"
+    "env:nano-g1-explorer" -> "esp32_base"
+    "env:radiomaster_900_bandit" -> "esp32_base"
+    "env:radiomaster_900_bandit_micro" -> "esp32_base"
+    "env:radiomaster_900_bandit_nano" -> "esp32_base"
+    "env:rak11200" -> "esp32_base"
+    "env:station-g1" -> "esp32_base"
+    "env:tbeam" -> "esp32_base"
+    "env:tbeam-displayshield" -> "env:tbeam"
+    "env:tbeam0_7" -> "esp32_base"
+    "env:tlora-v1" -> "esp32_base"
+    "env:tlora_v1_3" -> "esp32_base"
+    "env:tlora-v2" -> "esp32_base"
+    "env:tlora-v2-1-1_6" -> "esp32_base"
+    "env:sugarcube" -> "env:tlora-v2-1-1_6"
+    "env:tlora-v2-1-1_6-tcxo" -> "esp32_base"
+    "env:tlora-v2-1-1_8" -> "esp32_base"
+    "env:tlora-v3-3-0-tcxo" -> "esp32_base"
+    "env:trackerd" -> "esp32_base"
+    "env:wiphone" -> "esp32_base"
+    "env:ai-c3" -> "esp32c3_base"
+    "env:hackerboxes-esp32c3-oled" -> "esp32c3_base"
+    "env:heltec-ht62-esp32c3-sx1262" -> "esp32c3_base"
+    "env:heltec-hru-3601" -> "esp32c3_base"
+    "env:m5stack-stamp-c3" -> "esp32c3_base"
+    "env:m5stack-unitc6l" -> "esp32c6_base"
+    "env:tlora-c6" -> "esp32c6_base"
+    "env:nugget-s2-lora" -> "esp32s2_base"
+    "env:CDEBYTE_EoRa-Hub" -> "esp32s3_base"
+    "env:CDEBYTE_EoRa-S3" -> "esp32s3_base"
+    "env:EBYTE_ESP32-S3" -> "esp32s3_base"
+    "env:thinknode_m2" -> "esp32s3_base"
+    "env:thinknode_m5" -> "esp32s3_base"
+    "env:bpi_picow_esp32_s3" -> "esp32s3_base"
+    "env:crowpanel-esp32s3-5-epaper" -> "esp32s3_base"
+    "env:crowpanel-esp32s3-4-epaper" -> "esp32s3_base"
+    "env:crowpanel-esp32s3-2-epaper" -> "esp32s3_base"
+    "env:dreamcatcher" -> "esp32s3_base"
+    "env:dreamcatcher-2206" -> "esp32s3_base"
+    "crowpanel_base" -> "esp32s3_base"
+    "crowpanel_small_esp32s3_base" -> "crowpanel_base"
+    "crowpanel_large_esp32s3_base" -> "crowpanel_base"
+    "env:elecrow-adv-24-28-tft" -> "crowpanel_small_esp32s3_base"
+    "env:elecrow-adv-35-tft" -> "crowpanel_small_esp32s3_base"
+    "env:elecrow-adv1-43-50-70-tft" -> "crowpanel_large_esp32s3_base"
+    "env:ESP32-S3-Pico" -> "esp32s3_base"
+    "env:hackaday-communicator" -> "esp32s3_base"
+    "env:heltec_capsule_sensor_v3" -> "esp32s3_base"
+    "env:heltec_sensor_hub" -> "esp32s3_base"
+    "env:heltec-v3" -> "esp32s3_base"
+    "heltec_v4_base" -> "esp32s3_base"
+    "env:heltec-v4" -> "heltec_v4_base"
+    "env:heltec-v4-tft" -> "heltec_v4_base"
+    "env:heltec-vision-master-e213" -> "esp32s3_base"
+    "env:heltec-vision-master-e213-inkhud" -> "esp32s3_base"
+    "env:heltec-vision-master-e213-inkhud" -> "inkhud"
+    "env:heltec-vision-master-e290" -> "esp32s3_base"
+    "env:heltec-vision-master-e290-inkhud" -> "esp32s3_base"
+    "env:heltec-vision-master-e290-inkhud" -> "inkhud"
+    "env:heltec-vision-master-t190" -> "esp32s3_base"
+    "env:heltec-wireless-paper" -> "esp32s3_base"
+    "env:heltec-wireless-paper-inkhud" -> "esp32s3_base"
+    "env:heltec-wireless-paper-inkhud" -> "inkhud"
+    "env:heltec-wireless-paper-v1_0" -> "esp32s3_base"
+    "env:heltec-wireless-tracker" -> "esp32s3_base"
+    "env:heltec-wireless-tracker-V1-0" -> "esp32s3_base"
+    "env:heltec-wireless-tracker-v2" -> "esp32s3_base"
+    "env:heltec-wsl-v3" -> "esp32s3_base"
+    "env:icarus" -> "esp32s3_base"
+    "env:link32-s3-v1" -> "esp32s3_base"
+    "env:m5stack-cardputer-adv" -> "esp32s3_base"
+    "env:m5stack-cores3" -> "esp32s3_base"
+    "mesh_tab_base" -> "esp32s3_base"
+    "mesh_tab_xpt2046" -> "mesh_tab_base"
+    "mesh_tab_ft5x06" -> "mesh_tab_base"
+    "env:mesh-tab-3-2-TN-resistive" -> "mesh_tab_base"
+    "env:mesh-tab-3-2-IPS-resistive" -> "mesh_tab_base"
+    "env:mesh-tab-3-5-IPS-resistive" -> "mesh_tab_base"
+    "env:mesh-tab-3-5-TN-resistive" -> "mesh_tab_base"
+    "env:mesh-tab-3-2-IPS-capacitive" -> "mesh_tab_base"
+    "env:mesh-tab-3-5-IPS-capacitive" -> "mesh_tab_base"
+    "env:mesh-tab-4-0-IPS-capacitive" -> "mesh_tab_base"
+    "env:mini-epaper-s3" -> "esp32s3_base"
+    "env:mini-epaper-s3-inkhud" -> "esp32s3_base"
+    "env:mini-epaper-s3-inkhud" -> "inkhud"
+    "env:nibble-esp32" -> "esp32s3_base"
+    "env:nugget-s3-lora" -> "esp32s3_base"
+    "env:picomputer-s3" -> "esp32s3_base"
+    "env:picomputer-s3-tft" -> "env:picomputer-s3"
+    "env:rak3312" -> "esp32s3_base"
+    "env:rak3112" -> "esp32s3_base"
+    "env:rak_wismesh_tap_v2" -> "esp32s3_base"
+    "env:rak_wismesh_tap_v2-tft" -> "env:rak_wismesh_tap_v2"
+    "env:seeed-sensecap-indicator" -> "esp32s3_base"
+    "env:seeed-sensecap-indicator-tft" -> "env:seeed-sensecap-indicator"
+    "env:seeed-xiao-s3" -> "esp32s3_base"
+    "env:station-g2" -> "esp32s3_base"
+    "env:t-beam-1w" -> "esp32s3_base"
+    "env:t-deck" -> "esp32s3_base"
+    "env:t-deck-tft" -> "env:t-deck"
+    "env:t-deck-pro" -> "esp32s3_base"
+    "env:t-eth-elite" -> "esp32s3_base"
+    "env:t-watch-s3" -> "esp32s3_base"
+    "t5s3_epaper_base" -> "esp32s3_base"
+    "env:t5s3_epaper_inkhud" -> "t5s3_epaper_base"
+    "env:t5s3_epaper_inkhud" -> "inkhud"
+    "env:t5s3-epaper-v1" -> "t5s3_epaper_base"
+    "env:t5s3-epaper-v2" -> "t5s3_epaper_base"
+    "env:tbeam-s3-core" -> "esp32s3_base"
+    "env:tlora-pager" -> "esp32s3_base"
+    "env:tlora-pager-tft" -> "env:tlora-pager"
+    "env:tlora-t3s3-epaper" -> "esp32s3_base"
+    "env:tlora-t3s3-epaper-inkhud" -> "esp32s3_base"
+    "env:tlora-t3s3-epaper-inkhud" -> "inkhud"
+    "env:tlora-t3s3-v1" -> "esp32s3_base"
+    "env:tracksenger" -> "esp32s3_base"
+    "env:tracksenger-lcd" -> "esp32s3_base"
+    "env:tracksenger-oled" -> "esp32s3_base"
+    "env:unphone" -> "esp32s3_base"
+    "env:unphone-tft" -> "env:unphone"
+    "native_base" -> "portduino_base"
+    "env:native" -> "native_base"
+    "env:native-tft" -> "native_base"
+    "env:native-fb" -> "native_base"
+    "env:native-tft-debug" -> "native_base"
+    "env:coverage" -> "env:native"
+    "env:buildroot" -> "portduino_base"
+    "env:pca10059_diy_eink" -> "nrf52840_base"
+    "env:thinknode_m1" -> "nrf52840_base"
+    "env:thinknode_m1-inkhud" -> "nrf52840_base"
+    "env:thinknode_m1-inkhud" -> "inkhud"
+    "env:thinknode_m3" -> "nrf52840_base"
+    "env:thinknode_m4" -> "nrf52840_base"
+    "env:thinknode_m6" -> "nrf52840_base"
+    "env:ME25LS01-4Y10TD" -> "nrf52840_base"
+    "env:ME25LS01-4Y10TD_e-ink" -> "nrf52840_base"
+    "env:ms24sf1" -> "nrf52840_base"
+    "env:makerpython_nrf52840_sx1280_eink" -> "nrf52840_base"
+    "env:makerpython_nrf52840_sx1280_oled" -> "nrf52840_base"
+    "env:TWC_mesh_v4" -> "nrf52840_base"
+    "env:canaryone" -> "nrf52840_base"
+    "env:minimesh_lite" -> "nrf52840_base"
+    "env:feather_diy" -> "nrf52840_base"
+    "env:gat562_mesh_trial_tracker" -> "nrf52840_base"
+    "env:heltec-mesh-node-t096" -> "nrf52840_base"
+    "env:heltec-mesh-node-t114" -> "nrf52840_base"
+    "env:heltec-mesh-node-t114-inkhud" -> "nrf52840_base"
+    "env:heltec-mesh-node-t114-inkhud" -> "inkhud"
+    "env:heltec-mesh-pocket-5000" -> "nrf52840_base"
+    "env:heltec-mesh-pocket-5000-inkhud" -> "nrf52840_base"
+    "env:heltec-mesh-pocket-5000-inkhud" -> "inkhud"
+    "env:heltec-mesh-pocket-10000" -> "nrf52840_base"
+    "env:heltec-mesh-pocket-10000-inkhud" -> "nrf52840_base"
+    "env:heltec-mesh-pocket-10000-inkhud" -> "inkhud"
+    "heltec_mesh_solar_base" -> "nrf52840_base"
+    "env:heltec-mesh-solar" -> "heltec_mesh_solar_base"
+    "env:heltec-mesh-solar-eink" -> "heltec_mesh_solar_base"
+    "env:heltec-mesh-solar-inkhud" -> "heltec_mesh_solar_base"
+    "env:heltec-mesh-solar-inkhud" -> "inkhud"
+    "env:heltec-mesh-solar-oled" -> "heltec_mesh_solar_base"
+    "env:heltec-mesh-solar-tft" -> "heltec_mesh_solar_base"
+    "env:meshlink" -> "nrf52840_base"
+    "env:meshlink_eink" -> "nrf52840_base"
+    "env:meshtiny" -> "nrf52840_base"
+    "env:monteops_hw1" -> "nrf52840_base"
+    "env:muzi-base" -> "nrf52840_base"
+    "env:nano-g2-ultra" -> "nrf52840_base"
+    "env:r1-neo" -> "nrf52840_base"
+    "env:rak2560" -> "nrf52840_base"
+    "env:rak3401-1watt" -> "nrf52840_base"
+    "env:rak4631" -> "nrf52840_base"
+    "env:rak4631_dbg" -> "env:rak4631"
+    "env:rak4631_eink" -> "nrf52840_base"
+    "env:rak4631_eink_onrxtx" -> "nrf52840_base"
+    "env:rak4631_eth_gw" -> "nrf52840_base"
+    "env:rak4631_eth_gw_dbg" -> "env:rak4631"
+    "env:rak4631_nomadstar_meteor_pro" -> "nrf52840_base"
+    "env:rak4631_nomadstar_meteor_pro_dbg" -> "env:rak4631_nomadstar_meteor_pro"
+    "env:rak_wismeshtag" -> "nrf52840_base"
+    "env:rak_wismeshtap" -> "nrf52840_base"
+    "env:seeed_solar_node" -> "nrf52840_base"
+    "env:seeed_wio_tracker_L1" -> "nrf52840_base"
+    "env:seeed_wio_tracker_L1_eink" -> "nrf52840_base"
+    "env:seeed_wio_tracker_L1_eink-inkhud" -> "nrf52840_base"
+    "env:seeed_wio_tracker_L1_eink-inkhud" -> "inkhud"
+    "env:seeed_xiao_nrf52840_kit" -> "nrf52840_base"
+    "env:seeed_xiao_nrf52840_kit_i2c" -> "env:seeed_xiao_nrf52840_kit"
+    "env:t-echo" -> "nrf52840_base"
+    "env:t-echo-inkhud" -> "nrf52840_base"
+    "env:t-echo-inkhud" -> "inkhud"
+    "env:t-echo-lite" -> "nrf52840_base"
+    "env:t-echo-plus" -> "nrf52840_base"
+    "env:tracker-t1000-e" -> "nrf52840_base"
+    "env:wio-sdk-wm1110" -> "nrf52840_base"
+    "env:wio-t1000-s" -> "nrf52840_base"
+    "env:wio-tracker-wm1110" -> "nrf52840_base"
+    "env:challenger_2040_lora" -> "rp2040_base"
+    "env:catsniffer" -> "rp2040_base"
+    "env:feather_rp2040_rfm95" -> "rp2040_base"
+    "env:nibble-rp2040" -> "rp2040_base"
+    "env:rak11310" -> "rp2040_base"
+    "env:rp2040-lora" -> "rp2040_base"
+    "env:pico" -> "rp2040_base"
+    "env:pico_slowclock" -> "rp2040_base"
+    "env:picow" -> "rp2040_base"
+    "env:senselora_rp2040" -> "rp2040_base"
+    "env:pico2" -> "rp2350_base"
+    "env:pico2w" -> "rp2350_base"
+    "env:CDEBYTE_E77-MBL" -> "stm32_base"
+    "env:milesight_gs301" -> "stm32_base"
+    "env:rak3172" -> "stm32_base"
+    "env:russell" -> "stm32_base"
+    "env:wio-e5" -> "stm32_base"
+    "env:9m2ibr_aprs_lora_tracker" -> "esp32_base"
+    "env:meshtastic-dr-dev" -> "esp32_base"
+    "env:hydra" -> "esp32_base"
+    "env:meshtastic-diy-v1" -> "esp32_base"
+    "env:meshtastic-diy-v1_1" -> "esp32_base"
+    "env:esp32c3_super_mini" -> "esp32c3_base"
+    "env:my-esp32s3-diy-eink" -> "esp32s3_base"
+    "env:my-esp32s3-diy-oled" -> "esp32s3_base"
+    "env:t-energy-s3_e22" -> "esp32s3_base"
+    "env:WashTastic" -> "nrf52840_base"
+    "env:nrf52_promicro_diy_tcxo" -> "nrf52840_base"
+    "env:nrf52_promicro_diy-inkhud" -> "nrf52840_base"
+    "env:nrf52_promicro_diy-inkhud" -> "inkhud"
+    "env:seeed_xiao_nrf52840_btb" -> "env:seeed_xiao_nrf52840_kit"
+    "env:seeed_xiao_nrf52840_e22_900m30s" -> "env:seeed_xiao_nrf52840_kit"
+    "env:seeed_xiao_nrf52840_e22_900m33s" -> "env:seeed_xiao_nrf52840_kit"
+    "env:xiao_ble" -> "env:seeed_xiao_nrf52840_kit"
+    "env:xiao_ble_30db" -> "env:seeed_xiao_nrf52840_kit"
+    "env:xiao_ble_33db" -> "env:seeed_xiao_nrf52840_kit"
+}

@@ -60,6 +60,10 @@ pio-env-graph --refs
 
 ![refs](https://raw.githubusercontent.com/eagafonov/pio-env-graph/master/docs/example-refs.png)
 
+### Real-world: Meshtastic firmware
+
+The [Meshtastic firmware](https://github.com/meshtastic/firmware) project has 254 sections and 255 edges — [view the full graph](https://raw.githubusercontent.com/eagafonov/pio-env-graph/master/docs/example-meshtastic.png) (large image, [DOT source](docs/example-meshtastic.dot)).
+
 ## Development
 
 The Makefile handles venv setup automatically on first run:
